@@ -224,3 +224,17 @@ toolchain(
     toolchain = ":cc-compiler-arm64_windows",
     toolchain_type = "@bazel_tools//tools/cpp:toolchain_type",
 )
+
+toolchain(
+    name = "cc-toolchain-arm64_linux",
+    exec_compatible_with = [
+        "@platforms//cpu:aarch64",
+        "@platforms//os:linux",
+    ],
+    target_compatible_with = [
+        "@platforms//cpu:aarch64",
+        "@platforms//os:linux",
+    ],
+    toolchain = ":cc-compiler-arm64_linux",
+    toolchain_type = "@bazel_tools//tools/cpp:toolchain_type",
+)
